@@ -1,0 +1,32 @@
+
+def calculator():
+    list_digit = ['1','2','3','4','5','6','7','8','9','0']
+    list_operator = ['+','-','/','*']
+    num_1 = input('Enter the first digit: ')
+    num_3 = input('Enter the operator: ')
+    num_2 = input('Enter the second digit: ')
+
+    while num_1 and num_2  not in list_digit and num_3 not in list_operator:
+
+        print('Wrong input!')
+
+        break
+        calculator()
+
+
+    if num_1.isdigit() and num_2.isdigit() and num_3 in list_operator:
+        if num_3 == list_operator[0]:
+            print(int(num_1)+int(num_2))
+        elif num_3 == list_operator[1]:
+            print(int(num_1)-int(num_2))
+        elif num_3 == list_operator[2]:
+            print(int(num_1)/int(num_2))
+        elif num_3 == list_operator[3]:
+            print(int(num_1)*int(num_2))
+
+
+
+
+
+calculator()
+
